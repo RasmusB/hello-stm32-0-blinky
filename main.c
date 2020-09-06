@@ -70,9 +70,9 @@ int main() {
 
     // Toggle the LED on and off forever
     while (1) {
-        gpio_set(GPIOA, GPIO11);
+        gpio_set(GPIOC, GPIO13);
         delay(1000);
-        gpio_clear(GPIOA, GPIO11);
+        gpio_clear(GPIOC, GPIO13);
         delay(1000);
     }
 
