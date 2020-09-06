@@ -1,4 +1,5 @@
 #include <errno.h>
+#include <stdint.h>
 
 #include <libopencm3/stm32/rcc.h>
 #include <libopencm3/stm32/gpio.h>
@@ -13,12 +14,7 @@ static void clock_setup() {
 
     // Since our LED is on GPIO bank C, we need to enable
     // the peripheral clock to this GPIO bank in order to use it.
-    rcc_periph_clock_enable(RCC_GPIOA);
-    rcc_periph_clock_enable(RCC_GPIOB);
     rcc_periph_clock_enable(RCC_GPIOC);
-
-    // In order to use our UART, we must enable the clock to it as well.
-    rcc_periph_clock_enable(RCC_USART1);
 }
 
 static void systick_setup() {
