@@ -4,9 +4,7 @@
 #include <libopencm3/stm32/gpio.h>
 #include <libopencm3/cm3/systick.h>
 
-extern "C" {
-    void sys_tick_handler(void);
-}
+void sys_tick_handler(void);
 
 static void clock_setup() {
     // First, let's ensure that our clock is running off the high-speed internal

@@ -8,11 +8,11 @@ OPENCM3_DIR := ./libopencm3
 BINARY = main
 
 # Linker script for our MCU
-LDSCRIPT = stm32f0.ld
+LDSCRIPT = stm32f103c8t6.ld
 
-# Using the stm32f0 series chip
-LIBNAME		= opencm3_stm32f0
-DEFS		+= -DSTM32F0
+# Using the stm32f1 series chip
+LIBNAME		= opencm3_stm32f1
+DEFS		+= -DSTM32F1
 
 # Target-specific flags
 FP_FLAGS	?= -msoft-float
