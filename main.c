@@ -60,7 +60,7 @@ void delay(uint64_t duration) {
 
 static void gpio_setup() {
     // Our test LED is connected to Port A pin 11, so let's set it as output
-    gpio_set_mode(GPIOA, GPIO_MODE_OUTPUT_2_MHZ, GPIO_CNF_OUTPUT_PUSHPULL, GPIO11);
+    gpio_set_mode(GPIOC, GPIO_MODE_OUTPUT_2_MHZ, GPIO_CNF_OUTPUT_PUSHPULL, GPIO13);
 }
 
 int main() {
