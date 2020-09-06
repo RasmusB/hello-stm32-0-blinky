@@ -11,10 +11,11 @@ static void clock_setup() {
     // oscillator (HSI) at 48MHz.
     rcc_clock_setup_in_hsi_out_48mhz();
 
-    // Since our LED is on GPIO bank A, we need to enable
+    // Since our LED is on GPIO bank C, we need to enable
     // the peripheral clock to this GPIO bank in order to use it.
     rcc_periph_clock_enable(RCC_GPIOA);
     rcc_periph_clock_enable(RCC_GPIOB);
+    rcc_periph_clock_enable(RCC_GPIOC);
 
     // In order to use our UART, we must enable the clock to it as well.
     rcc_periph_clock_enable(RCC_USART1);
